@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px; /* Ajusta el ancho máximo según tus necesidades */
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+        }
+
+        .textarea-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .textarea {
+            width: 48%; /* Ajusta el ancho según tus necesidades, se reduce para dejar espacio entre ellos */
+            height: 300px; /* Ajusta la altura según tus necesidades */
+            padding: 20px; /* Añade relleno para aumentar el espacio dentro del textarea */
+            resize: none; /* Evita que los usuarios redimensionen manualmente el textarea */
+            margin: 10px; /* Ajusta el margen para el espacio entre los textarea */
+        }
+        
+        .submit-button {
+            padding: 15px 30px; /* Ajusta el relleno del botón según tus necesidades */
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Comparador de texto</h1>
+        <form action="/comparar/compare" method="post">
+            <div class="textarea-container">
+                <textarea name="text1" placeholder="Texto 1" class="textarea"></textarea>
+                <textarea name="text2" placeholder="Texto 2" class="textarea"></textarea>
+            </div>
+            <input type="submit" value="Comparar" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>
